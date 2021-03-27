@@ -22,7 +22,7 @@ Route::get('/salas/crear', 'SalasController@create')->name('salas.create');
 Route::post('/salas', 'SalasController@store')->name('salas.store');
 Route::get('/salas/{sala}', 'SalasController@show')->name('salas.show');
 Route::get('/salas/{sala}/integrantes', 'SalasController@integrantes')->name('salas.integrantes');
-Route::get('/salas/{sala}/calculo', 'SalasController@calculadora')->name('salas.calculadora');
+// Route::get('/salas/{sala}/calculo', 'SalasController@calculadora')->name('salas.calculadora');
 Route::delete('/salas/{sala}', 'SalasController@destroy')->name('salas.destroy');
 
 

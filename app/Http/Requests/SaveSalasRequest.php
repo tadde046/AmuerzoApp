@@ -27,6 +27,26 @@ class SaveSalasRequest extends FormRequest
             'name' => 'required',
             'url' => 'required',
             'ceo' =>'required',
+            'cantidad' => 'required',
+            'operando1' => 'required',
+            'operando2' => 'required',
+            'operando3' => 'required',
+            'operando4' => 'required',
+            'operando5' => 'required',
+            'operando6' => 'required',
+            'operando7' => 'required',
+            'operando8' => 'required',
+            'operando9' => 'required',
+            'operador1' => 'required',
+            'operador2' => 'required',
+            'operador3' => 'required',
+            'operador4' => 'required',
+            'operador5' => 'required',
+            'operador6' => 'required',
+            'operador7' => 'required',
+            'operador8' => 'required',
+            'operador9' => 'required',
+
         ];
     }
 }

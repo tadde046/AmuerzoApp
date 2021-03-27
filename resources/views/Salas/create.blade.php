@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Almuerzo</title>
+        <title>Almuerzo - Salas - Crear</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -31,8 +31,38 @@
             </label>
 
             <label>
-                <input type="text" name="ceo" value="{{old('ceo', $salas->ceo)}}" placeholder="Nombre del creador y director de la sala">
+                <input type="text" name="ceo" value="{{Auth()->user()->name}}" placeholder="Nombre del creador y director de la sala">
             </label>
+
+            <label>
+                <input type="number" name="cantidad" value=1 >
+            </label>
+
+            <input type="text"     name="operador1" placeholder="Nombre del usuario">
+            <input type="number"   name="operando1">
+            <input type="text"     name="operador2" placeholder="Nombre del usuario">
+            <input type="number"    name="operando2">
+            <input type="text"     name="operador3" placeholder="Nombre del usuario">
+            <input type="number"    name="operando3">
+            <br>
+            
+            <input type="text"     name="operador4" placeholder="Nombre del usuario">
+            <input type="number"   name="operando4">
+            <input type="text"     name="operador5" placeholder="Nombre del usuario">
+            <input type="number"   name="operando5">
+            <input type="text"     name="operador6" placeholder="Nombre del usuario">
+            <input type="number"   name="operando6">
+            <br>
+            
+            <input type="text"     name="operador7" placeholder="Nombre del usuario">
+            <input type="number"   name="operando7">
+            <input type="text"     name="operador8" placeholder="Nombre del usuario">
+            <input type="number"   name="operando8">
+            <input type="text"     name="operador9" placeholder="Nombre del usuario">
+            <input type="number"   name="operando9">
+
+
+            
             
 
             <button>Guardar</button>
