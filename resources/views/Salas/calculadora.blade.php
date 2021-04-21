@@ -12,7 +12,7 @@
             .color{
                 color: black;
             }
-            
+
         </style>
     </head>
     <body>
@@ -27,9 +27,9 @@
 
     @endif
         <form method="get" action="{{route('salas.show', $sala)}}">
-            <input type="number" readonly value="{{  $sala->cantidad }}" name="cantidad" placeholder="Cantidad de personas (minimo 1)">
+            <input type="number"  value="{{  $sala->cantidad }}" name="cantidad" placeholder="Cantidad de personas (minimo 1)">
             <h6>Si un campo va a estar vacio si o si se debe poner un 0</h6>
-            
+
             <input type="text" readonly value="{{  $sala->operador1}}" name="operador1" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando1}}" name="operando1">
             <input type="text" readonly value="{{  $sala->operador2}}" name="operador2" placeholder="Nombre del usuario">
@@ -37,7 +37,7 @@
             <input type="text" readonly value="{{  $sala->operador3}}" name="operador3" placeholder="Nombre del usuario">
             <input type="number"  value="{{  $sala->operando3}}" name="operando3">
             <br>
-            
+
             <input type="text" readonly value="{{  $sala->operador4}}" name="operador4" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando4}}" name="operando4">
             <input type="text" readonly value="{{  $sala->operador5}}" name="operador5" placeholder="Nombre del usuario">
@@ -45,21 +45,21 @@
             <input type="text" readonly value="{{  $sala->operador6}}" name="operador6" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando6}}" name="operando6">
             <br>
-            
+
             <input type="text" readonly value="{{  $sala->operador7}}" name="operador7" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando7}}" name="operando7">
             <input type="text" readonly value="{{  $sala->operador8}}" name="operador8" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando8}}" name="operando8">
             <input type="text" readonly value="{{  $sala->operador9}}" name="operador9" placeholder="Nombre del usuario">
             <input type="number" value="{{  $sala->operando9}}" name="operando9">
-            
+
             <input type="submit" value="enviar">
             <h4>Cada uno debe pagar {{$solucion}}</h4>
-            
+
             <p>El total de todo sumado es de {{$suma}}</p>
             @if ($operandos < - 0)
             <p>F</p>
-                
+
             @endif
             <p>{{$gasto1}}</p>
             <p>{{$gasto2}}</p>
@@ -71,13 +71,13 @@
             <p>{{$gasto8}}</p>
             <p>{{$gasto9}}</p>
             <!-- Button trigger modal -->
-            
-            
+
+
         </form>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Ticket!
         </button>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -162,7 +162,7 @@
                                 {{$gastoo6}}
                             </th>
                             <th>
-                                
+
                             </th>
                         </tr>
                         <tr>
@@ -198,7 +198,7 @@
 
                             </th>
                         </tr>
-                        
+
                     </table>
                 </div>
                 <div class="modal-footer">
@@ -208,7 +208,7 @@
             </div>
             </div>
         </div>
-        
+
         <script>//<![CDATA[
             function getlink() {
                 var aux = document.createElement("input");
@@ -229,15 +229,15 @@
                     window.load = setTimeout("document.body.removeChild(aviso)", 2000);
         }
         //]]></script>
-        
-        
+
+
         {{-- <a class="copiar" href='javascript:getlink();'>Comparte con tus amigos!</a> --}}
 
-        
 
 
 
-        
+
+
         @endsection
 
 

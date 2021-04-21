@@ -25,9 +25,9 @@ class SalasController extends Controller
 
 
         return view('Salas.index', [
-            
+
         'salas' => Sala::latest()->paginate(10),
-        
+
         ]);
     }
 
@@ -79,13 +79,13 @@ class SalasController extends Controller
     {
 
 
-       
+
         Sala::create( $request->validated() ); //recibimos todo con all y con only solo lo que definimos, pero con fields solo lo que definimos mas arriba
 
           return redirect()->route('salas.index')->with('status', 'La sala ha sido creado con exito!');
-      
+
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -120,15 +120,15 @@ class SalasController extends Controller
         $suma = $operando1 + $operando2 + $operando3 + $operando4 + $operando5 + $operando6 + $operando7 + $operando8 + $operando9;
         $solucion = $suma / $cantidad;
         $msj = " debe pagar ";
-        
+
         // $msjdebiendo = " le deben pagar ";
         // $a = "a ";
         $operadores = $operador1.$operador2.$operador3.$operador4.$operador5.$operador6.$operador7.$operador8.$operador9;
         $operandos = $operando1.$operando2.$operando3.$operando4.$operando5.$operando6.$operando7.$operando8.$operando9;
         // $total1 = $operador1.$msj.$operando1;
-        
-        
-        
+
+
+
         // $gasto1 = $solucion - $operando1;git add .
 
         if ($operando1 > 0 || $sala->operador1 != "null"  ) {
@@ -138,7 +138,7 @@ class SalasController extends Controller
             $namee1 = $sala->operador1;
             $gastoo1 = $gastardo1;
         }
-        
+
         else {
             $gasto1 = null;
             $namee1 = null;
@@ -186,8 +186,8 @@ class SalasController extends Controller
             $gastoo4 = null;
         }
 
-        
-        
+
+
         if ($operando5 > 0 || $sala->operador5 != "null"  ) {
             // $gasto1 = $solucion - $operando1;
             $gastardo5 =$solucion - $operando5;
@@ -248,7 +248,7 @@ class SalasController extends Controller
             $namee9 = null;
             $gastoo9 = null;
         }
-        
+
         // $gasto2 = $solucion - $operando2;
         // $gasto3 = $solucion - $operando3;
         // $gasto4 = $solucion - $operando4;
@@ -259,7 +259,7 @@ class SalasController extends Controller
         // $gasto9 = $solucion - $operando9;
         // suma todo y lo divide entre la cantidad
         //y le resta la division a lo que gasto
-        
+
         return view('Salas.calculadora', [
 
 
@@ -317,7 +317,7 @@ class SalasController extends Controller
             'gastoo9' => $gastoo9,
 
             // 'deben1' => $deben1
-            
+
             // 'num1' => $num1,
             // 'num2' => $num2,
             // 'resultado' => $resultado
@@ -328,8 +328,8 @@ class SalasController extends Controller
 
 
     }
-    
-    
+
+
 
 
     // public function calculadora(Sala $sala, Calculadora $calculadora)
@@ -337,7 +337,7 @@ class SalasController extends Controller
     //     // $operando1 = $_GET['operando1'];
     //     // $operando2 = $_GET['operando2'];
     //     // $operador = $_GET['operador'];
-        
+
     //     // if($operador == "+"){
     //     //     $solucion = $operando1 + $operando2;
     //     // }else if($operador == "-"){
@@ -348,7 +348,7 @@ class SalasController extends Controller
     //     //     $solucion = $operando1 / $operando2;
     //     // }
     //     // // echo "La solución es: ".$solucion;
-        
+
     //     // $operando1 = is_null($_GET['operando1']) ?  0;
     //     $cantidadDePersonas = isset($_GET['cantidad']) ? $_GET['cantidad'] : 1;
     //     $operando1 = isset($_GET['operando1']) ? $_GET['operando1'] : 0;
@@ -363,12 +363,12 @@ class SalasController extends Controller
     //     $suma = $operando1 + $operando2 + $operando3 + $operando4 + $operando5 + $operando6 + $operando7 + $operando8 + $operando9;
     //     $solucion = $suma / $cantidadDePersonas;
 
-    
+
     // return view('Salas.calculadora', [
 
 
     //     'sala' => $sala,
-    //     'calculadora' => $calculadora, 
+    //     'calculadora' => $calculadora,
     //     'operando1' => $operando1,
     //     'operando2' => $operando2,
     //     'operando3' => $operando3,
@@ -381,12 +381,12 @@ class SalasController extends Controller
     //     'solucion' => $solucion,
     //     'cantidad' => $cantidadDePersonas,
     //     'suma' => $suma
-        
+
 
     // ]);
 
     //}
-    
+
 
     /**
      * Show the form for editing the specified resource.
